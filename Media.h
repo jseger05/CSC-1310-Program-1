@@ -12,7 +12,7 @@ class Media{
         double size;
 
     public:
-        Media(std::string = "Default title", int = 2000, double = 0.0);
+        Media(std::string, int = 2000, double = 0.0);
 
         std::string getTitle();
         int getYear();

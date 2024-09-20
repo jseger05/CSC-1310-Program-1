@@ -1,0 +1,26 @@
+Name~Artist~Year~Listens
+Blinding Lights~The Weeknd~2019~4444615255~
+Shape of You~Ed Sheeran~2017~4007397963~
+Someone You Loved~Lewis Capaldi~2018~3573315537~
+As It Was~Harry Styles~2022~3529319425~
+Sunflower~Post Malone~2018~3503171010~
+StarBoy~The Weeknd~2016~3460780216~
+One Dance~Drake~2016~3328472300~
+Stay~The Kid Laroi~2021~3252839510~
+Sweater Weather~The Neighbourhood~2012~3160943914~
+Dance Monkey~Tones And I~2019~3134607660~
+Believer~Imagine Dragons~2017~3125699179~
+Heat Waves~Glass Animals~2020~3122502276~
+Perfect~Ed Sheeran~2017~3078152898~
+Rockstar~Post Malone~2017~3022943260~
+Say You Won't Let Go~James Arthur~2016~2973067910~
+Closer~The Chainsmokers~2016~2968626400~
+Lovely~Billie Eilish~2018~2962841290~
+Watermelon Sugar~Harry Styles~2019~2826761679~
+Señorita~Shawn Mendes~2019~2813888880~
+Something Just Like This~Coldplay~2017~2759188804~
+Don't Start Now~Dua Lipa~2019~2713563132~
+Ripetide~Vance Joy~2013~2697922847~
+Take Me To Church~Hozier~2013~2678125231~
+Another Love~Tom Odell~1012~2622039860~
+Lucid Dreams~Juice WRLD~2018~2620430730~

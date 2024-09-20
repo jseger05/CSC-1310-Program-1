@@ -1,3 +1,4 @@
+Name~Year Published~Number of Times Played
 The Legend of Zelda: Ocarina of Time~1998~102949
 SoulCalibur~1999~102412
 Grand Theft Auto IV~2008~102040

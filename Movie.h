@@ -10,7 +10,7 @@
 
 #include "Media.h"
 
-class Movie{
+class Movie : public Media{
     private:
         //using Media parent class for movie
         Media movieType;
@@ -20,15 +20,9 @@ class Movie{
         Movie(){
             movieType = Media("", 0, 0);
         }
-
-        //function gets and sets
-        void setName(std::string);
-        void setYear(int);
-        void setPlays(double);
-
-        std::string getName();
-        int getYear();
-        double getPlays();
+        Movie(std::string title, int year, double plays){
+            movieType = Media(title, year, plays);
+        }
 };
 
 #endif

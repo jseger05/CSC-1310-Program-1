@@ -1,7 +1,7 @@
 #include "Media.h"
 
 //This is the parent class -- should have stuff that all media share (title, publication date, etc) -- see Readme
-Media::Media(std::string title = "Default title", int year = 2000, double size = 0.0){
+Media::Media(std::string title /*= "Default title"*/, int year /*= 2000*/, double size /*= 0.0*/){
     title = title;
     year = year;
     size = size;

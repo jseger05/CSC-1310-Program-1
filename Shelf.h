@@ -3,7 +3,8 @@
  * 9/23/24
  * Purpose Dynamically allocate media types
  */
-
+#ifndef SHELF_H
+#define SHELF_H
 #include "Media.h"
 #include "Movie.h"
 #include "Music.h"
@@ -43,3 +44,7 @@ struct Shelf{
 
     
 };
+
+bool importFile(std::string, std::string, Shelf&);
+
+#endif

@@ -6,32 +6,32 @@
 #include "Shelf.h"
 Shelf::Shelf(Media arr[]){
     setType("Basic Media");
-    size = sizeof(arr);
+    size = sizeof(*arr);
     media.resize(size);
     media.assign(arr, arr + size);
 }
 Shelf::Shelf(Movie arr[]){
     setType("Movie");
-    size = sizeof(arr);
+    size = sizeof(*arr);
     media.resize(size);
     media.assign(arr, arr + size);
 }
 //until datatypes added, commented out
 /*Shelf(Music arr[]){
     setType("Music");
-    size = sizeof(arr);
+    size = sizeof(*arr);
     media.resize(size);
     media.assign(arr, arr + size);
 }
 Shelf(TvShow arr[]){
     setType("TvShow");
-    size = sizeof(arr);
+    size = sizeof(*arr);
     media.resize(size);
     media.assign(arr, arr + size);
 }
 Shelf(Videogame arr[]){
     setType("Videogame");
-    size = sizeof(arr);
+    size = sizeof(*arr);
     media.resize(size);
     media.assign(arr, arr + size);
 }*/

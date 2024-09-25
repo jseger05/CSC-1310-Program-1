@@ -6,52 +6,32 @@
 #include "Shelf.h"
 Shelf::Shelf(Media arr[]){
     setType("Basic Media");
-<<<<<<< HEAD
-    size = sizeof(*arr);
-=======
     size = sizeof(arr);
->>>>>>> fa7a777dffa1d8dd67d24ddf783d02becba28cc8
     media.resize(size);
     media.assign(arr, arr + size);
 }
 Shelf::Shelf(Movie arr[]){
     setType("Movie");
-<<<<<<< HEAD
-    size = sizeof(*arr);
-=======
     size = sizeof(arr);
->>>>>>> fa7a777dffa1d8dd67d24ddf783d02becba28cc8
     media.resize(size);
     media.assign(arr, arr + size);
 }
 //until datatypes added, commented out
 /*Shelf(Music arr[]){
     setType("Music");
-<<<<<<< HEAD
-    size = sizeof(*arr);
-=======
     size = sizeof(arr);
->>>>>>> fa7a777dffa1d8dd67d24ddf783d02becba28cc8
     media.resize(size);
     media.assign(arr, arr + size);
 }
 Shelf(TvShow arr[]){
     setType("TvShow");
-<<<<<<< HEAD
-    size = sizeof(*arr);
-=======
     size = sizeof(arr);
->>>>>>> fa7a777dffa1d8dd67d24ddf783d02becba28cc8
     media.resize(size);
     media.assign(arr, arr + size);
 }
 Shelf(Videogame arr[]){
     setType("Videogame");
-<<<<<<< HEAD
-    size = sizeof(*arr);
-=======
     size = sizeof(arr);
->>>>>>> fa7a777dffa1d8dd67d24ddf783d02becba28cc8
     media.resize(size);
     media.assign(arr, arr + size);
 }*/
@@ -78,8 +58,4 @@ std::string Shelf::getType(){
 int Shelf::getSize(){
     size = media.size();
     return(size);
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> fa7a777dffa1d8dd67d24ddf783d02becba28cc8

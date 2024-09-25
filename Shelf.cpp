@@ -46,6 +46,17 @@ void Shelf::addItem(Media item){
     size++;
     media.push_back(item);
 }
+
+void Shelf::removeItem(int index){
+    size--;
+    media.erase(media.begin() + index);
+}
+
+void Shelf::removeItem(int lower, int upper){
+    size = size - (upper - lower);
+    media.erase(media.begin() + lower, media.begin() + upper);
+}
+
 void Shelf::setType(std::string type){
     this->type = type;
 }

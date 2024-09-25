@@ -7,10 +7,11 @@
 class Storage{
     private:
         int size;
-        Media** stg = new Media*[size];
+        Media** stg;
     public:
     Storage(){
         size = 1;
+        stg = new Media*[size];
     }
     ~Storage(){
         delete stg;
@@ -19,6 +20,6 @@ class Storage{
     Storage(int, Media[]);
     void setMedia(int, Media);
     void changeSize(int);
-    void delMedia(int, Media);
+    void delMedia(int);
     Media getMedia(int);
 };

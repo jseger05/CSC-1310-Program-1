@@ -23,4 +23,4 @@ Jurassic World: Fallen Kingdom, 2018, 2,
 Frozen, 2013, 4,
 Deadpool & Wolverine, 2024, 3,
 Beuty and the Beast, 2017, 4,
-Morbius, 2022, 2147483647,
+Morbius, 2022, 2147483647

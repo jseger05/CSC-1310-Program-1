@@ -1,3 +1,8 @@
+/* 
+ * Written by Jonathan Salvato
+ * 9/25/24
+ * Purpose: allows for exporting data from Shelf to a files
+ */
 #include "Shelf.h"
 #include <fstream>
 

@@ -35,7 +35,7 @@ struct Shelf{
         Shelf(TvShow arr[]);
         Shelf(Videogame arr[]);*/
         void setItem(Media, int);
-        void setItem(std::string, int, double, int);
+        void setItem(std::string, std::string, int, double, int);
         void removeItem(int);
         void removeItem(int, int);
         void addItem(Media);

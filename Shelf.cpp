@@ -38,8 +38,8 @@ Shelf(Videogame arr[]){
 void Shelf::setItem(Media value, int index){
     media.at(index) = value;
 }
-void Shelf::setItem(std::string name, int year, double size, int index){
-    Media temp(name, year, size);
+void Shelf::setItem(std::string name, std::string creator, int year, double size, int index){
+    Media temp(name, creator, year, size);
     setItem(temp, index);
 }
 void Shelf::addItem(Media item){

@@ -49,4 +49,6 @@ struct Shelf{
 
 bool importFile(std::string, std::string, Shelf&);
 
+bool exportFile(std::string, Shelf);
+
 #endif

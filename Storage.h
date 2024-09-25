@@ -7,19 +7,19 @@
 class Storage{
     private:
         int size;
-        Media** stg;
+        Shelf** stg;
     public:
     Storage(){
         size = 1;
-        stg = new Media*[size];
+        stg = new Shelf*[size];
     }
     ~Storage(){
         delete stg;
     }
     Storage(int);
-    Storage(int, Media[]);
-    void setMedia(int, Media);
+    Storage(int, Shelf[]);
+    void setMedia(int, Shelf&);
     void changeSize(int);
-    void delMedia(int);
-    Media getMedia(int);
+    void delShelf(int);
+    Shelf getShelf(int);
 };

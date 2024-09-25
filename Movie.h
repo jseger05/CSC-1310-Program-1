@@ -18,10 +18,7 @@ class Movie : public Media{
     public:
     //default constructor
         Movie(){
-            movieType = Media("", 0, 0);
-        }
-        Movie(std::string title, int year, double plays){
-            movieType = Media(title, year, plays);
+            movieType = Media("", "", 0, 0);
         }
 };
 

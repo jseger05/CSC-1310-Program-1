@@ -7,12 +7,12 @@
 
 Storage::Storage(int size){
     this->size = size;
-    stg = new Media*[size];
+    stg = new Shelf*[size];
 }
 
-Storage::Storage(int size, Media arr[]){
+Storage::Storage(int size, Shelf arr[]){
     this->size = size;
-    stg = new Media*[size];
+    stg = new Shelf*[size];
     
     //writing array data to Storage obj
     for(int i = 0; i < size; i++){
@@ -20,10 +20,11 @@ Storage::Storage(int size, Media arr[]){
     }
 }
 
-void Storage::setMedia(int index, Media obj){
+void Storage::setMedia(int index, Shelf& obj){
     //checks to ensure data falls within bounds
-    if(index < size && index >= 0)
+    if(index < size && index >= 0){
         *(stg + index) = &obj;
+    }
     else
         return;
 }
@@ -31,7 +32,7 @@ void Storage::changeSize(int newSize){
     //this function is going to make me kms
 
     //defining a temporary array
-    Media** temp = new Media*[newSize];
+    Shelf** temp = new Shelf*[newSize];
 
     //write old array data to new
     for(int i = 0; i < newSize; i++){
@@ -48,7 +49,7 @@ void Storage::changeSize(int newSize){
     //clear temp
     delete temp;
 }
-void Storage::delMedia(int index){
+void Storage::delShelf(int index){
     //shift values about the chosen index
     for(int i = index; i < size - 1; i++){
         *(stg + index) = *(stg + (index + 1));
@@ -56,6 +57,6 @@ void Storage::delMedia(int index){
     //resize array
     changeSize(size - 1);
 }
-Media Storage::getMedia(int index){
-    return(*(*(stg + index)));
+Shelf Storage::getShelf(int index){
+    return(*stg[index - 1]);
 }

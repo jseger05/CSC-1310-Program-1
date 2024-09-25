@@ -61,7 +61,7 @@ void Shelf::setType(std::string type){
     this->type = type;
 }
 Media Shelf::getItem(int index){
-    return(media.at(index));
+    return(media.at(index - 1));
 }
 std::string Shelf::getType(){
     return(type);

@@ -9,5 +9,13 @@ int main(){
         std::cout << movie.getItem(i).getTitle() << ", " << movie.getItem(i).getYear() << ", " <<movie.getItem(i).getSize() << "\n"; 
     }
 
-    std::cout << exportFile("TEST_CASE_SRC/test.txt", movie);
+    std::cout << exportFile("TEST_CASE_SRC/test.txt", movie) << "\n";
+
+    movie.removeItem(0, movie.getSize());
+
+    importFile("TEST_CASE_SRC/test.txt", "Movies", movie);
+
+    for(int i = 0; i < movie.getSize(); i++){
+        std::cout << movie.getItem(i).getTitle() << ", " << movie.getItem(i).getYear() << ", " <<movie.getItem(i).getSize() << "\n"; 
+    }
 }*/

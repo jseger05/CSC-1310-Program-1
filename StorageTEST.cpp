@@ -1,4 +1,4 @@
-#include "Storage.h"
+/*#include "Storage.h"
 
 int main(){
     Shelf Movie;
@@ -12,11 +12,11 @@ int main(){
     idek.setMedia(0, Movie);
     idek.setMedia(1, Music);
 
-    /*for(int i = 0; i < Movie.getSize(); i++){
-        std::cout << Movie.getItem(i).getTitle() << ", " << Movie.getItem(i).getYear() << ", " <<Movie.getItem(i).getNum() << "\n"; 
-    }*/
+    //for(int i = 0; i < Movie.getSize(); i++){
+    //    std::cout << Movie.getItem(i).getTitle() << ", " << Movie.getItem(i).getYear() << ", " <<Movie.getItem(i).getNum() << "\n"; 
+    //}
 
 
     std::cout << idek.getShelf(1).getItem(4).getTitle() << "\n";
     std::cout << idek.getShelf(2).getItem(2).getTitle() << "\n";
-}
+}*/

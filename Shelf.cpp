@@ -10,31 +10,6 @@ Shelf::Shelf(Media arr[]){
     media.resize(size);
     media.assign(arr, arr + size);
 }
-Shelf::Shelf(Movie arr[]){
-    setType("Movie");
-    size = sizeof(*arr);
-    media.resize(size);
-    media.assign(arr, arr + size);
-}
-//until datatypes added, commented out
-/*Shelf(Music arr[]){
-    setType("Music");
-    size = sizeof(*arr);
-    media.resize(size);
-    media.assign(arr, arr + size);
-}
-Shelf(TvShow arr[]){
-    setType("TvShow");
-    size = sizeof(*arr);
-    media.resize(size);
-    media.assign(arr, arr + size);
-}
-Shelf(Videogame arr[]){
-    setType("Videogame");
-    size = sizeof(*arr);
-    media.resize(size);
-    media.assign(arr, arr + size);
-}*/
 void Shelf::setItem(Media value, int index){
     media.at(index) = value;
 }

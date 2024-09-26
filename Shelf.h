@@ -6,10 +6,6 @@
 #ifndef SHELF_H
 #define SHELF_H
 #include "Media.h"
-#include "Movie.h"
-#include "Music.h"
-#include "Tvshow.h"
-#include "Videogame.h"
 #include <vector>
 
 struct Shelf{
@@ -29,11 +25,6 @@ struct Shelf{
           media.clear();
         }
         Shelf(Media arr[]);
-        Shelf(Movie arr[]);
-        //until datatypes added, commented out
-        /*Shelf(Music arr[]);
-        Shelf(TvShow arr[]);
-        Shelf(Videogame arr[]);*/
         void setItem(Media, int);
         void setItem(std::string, std::string, int, double, int);
         void removeItem(int);

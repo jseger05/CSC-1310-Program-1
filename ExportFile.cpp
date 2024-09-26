@@ -20,11 +20,13 @@ bool exportFile(std::string directory, Shelf obj){
         if(!outFile.good()){
             return(false);
         }
-        for(int j = 0; j < 3; j++){
+        outFile << "Title, Creator, Year, Num";
+        for(int j = 0; j < 4; j++){
             switch(j){
                 case(0): outFile << obj.getItem(i).getTitle(); break;
-                case(1): outFile << obj.getItem(i).getYear(); break;
-                case(2): outFile << obj.getItem(i).getSize(); break;
+                case(1): outFile << obj.getItem(i).getCreator(); break;
+                case(2): outFile << obj.getItem(i).getYear(); break;
+                case(3): outFile << obj.getItem(i).getNum(); break;
             }
             //adding a comma to everything but the last entry
             if(!(i == (obj.getSize() - 1) && j == 2)){

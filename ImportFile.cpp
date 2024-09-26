@@ -34,6 +34,8 @@ bool importFile(std::string fileName, std::string type, Shelf& so_cool){
         //reading a row
         getline(inputFile, input, ','); 
         temp.setTitle(input);
+        getline(inputFile, input, ','); 
+        temp.setCreator(input);
         getline(inputFile, input, ',');
         temp.setYear(stoi(input));
         getline(inputFile, input, ',');

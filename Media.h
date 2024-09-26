@@ -8,16 +8,19 @@ class Media{
 
     private:
         std::string title;
+        std::string creator;
         int year;
-        double size;
+        double num;
 
     public:
-        Media(std::string = "Default title", int = 2000, double = 0.0);
+        Media(std::string = "Default title", std::string = "Default Artist", int = 2000, double = 0.0);
 
         std::string getTitle();
+        std::string getCreator();
         int getYear();
-        double getSize();
+        double getNum();
         void setTitle(std::string);
+        void setCreator(std::string);
         void setYear(int);
         void setSize(double);
 };

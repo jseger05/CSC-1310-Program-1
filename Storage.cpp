@@ -47,7 +47,7 @@ void Storage::changeSize(int newSize){
     stg = temp;
 
     //clear temp
-    delete temp;
+    delete[] *temp;
 }
 void Storage::delShelf(int index){
     //shift values about the chosen index

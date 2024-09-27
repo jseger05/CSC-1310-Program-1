@@ -1,3 +1,9 @@
+/* 
+ * Written by Jack Seger
+ * 9/13/24
+ * Header for the media class
+ */
+
 #ifndef MEDIA_H
 #define MEDIA_H
 

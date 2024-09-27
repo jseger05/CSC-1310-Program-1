@@ -32,6 +32,16 @@ void Storage::setMedia(int index, Shelf& obj){
         return;
 }
 
+//Function definition for Push_Back
+void Storage::push_back(Shelf& newShelf){
+    //changes size
+    changeSize(size + 1);
+    //adds shelf obj to end
+    setMedia(size, newShelf);
+    //increases shelf size;
+    size++;
+}
+
 // Functio definition for changeSize of the vector.  
 void Storage::changeSize(int newSize){
 

@@ -6,9 +6,13 @@
 #include "Shelf.h"
 Shelf::Shelf(Media arr[]){
     setType("Basic Media");
+    std::cout << "Test 1\n";
     size = sizeof(*arr);
-    media.resize(size);
+    std::cout << "Test 2\n";
+    //media.resize(size);
+    std::cout << "Test 3\n";
     media.assign(arr, arr + size);
+    std::cout << "Test 4\n";
 }
 
 // +++++++++++++++++++++++++++++++

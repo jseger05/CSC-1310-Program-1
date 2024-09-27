@@ -46,6 +46,13 @@ int main(){
     do{
         printMenu(library);
         inpVer(userChoice, 1, 4);
+        switch(userChoice){
+            case 1: break; //edit shelf -- new menu w options to remove element/s, add element (need dialogue to create new Media),
+                           //or edit individual element
+            case 2: break; //input file name, call importFile()
+            case 3: break; //iterate through shelves, input filename/ directory and call export file for each
+            default: break;
+        }
     }while(userChoice!=4);
 }
 

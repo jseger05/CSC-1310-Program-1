@@ -53,7 +53,7 @@ void printMenu(Storage library){
     std::cout << "\nYour library contains:";
     //instead of library.getSize()
     for(int i = 0; i < 2; i++){
-        std::cout << "\n\nShelf " << i << ": " << library.getShelf(i).getSize();
+        std::cout << "\n\nShelf " << i+1 << ": " << library.getShelf(i).getSize();
     }
     std::cout << "\n\nOptions:";
     std::cout << "\n1. Edit a shelf";

@@ -7,35 +7,65 @@
 
 #include "Media.h"
 
-//This is the parent class -- should have stuff that all media share (title, publication date, etc) -- see Readme
-Media::Media(std::string title, std::string creator, int year, double num){
+// This is the parent class -- should have stuff that all media share (title, publication date, etc) -- see Readme
+Media::Media(std::string title, std::string creator, int year, double num)
+{
     this->title = title;
     this->creator = creator;
     this->year = year;
     this->num = num;
 }
 
-std::string Media::getTitle(){
+// ACCESSOR FUNCTIONS
+
+// return the object's title as a string
+std::string Media::getTitle()
+{
     return title;
 }
-std::string Media::getCreator(){
+
+// return the object's creator/producer as a string
+std::string Media::getCreator()
+{
     return creator;
 }
-int Media::getYear(){
+
+// return the year the object was published/released as an integer
+int Media::getYear()
+{
     return year;
 }
-double Media::getNum(){
+
+// return the number of times the media was played as a double
+double Media::getNum()
+{
     return num;
 }
-void Media::setTitle(std::string t){
+
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// MUTATOR FUNCTIONS
+
+// set the object's title to the argument provided when this function is called, return nothing
+void Media::setTitle(std::string t)
+{
     title = t;
 }
-void Media::setCreator(std::string creator){
+
+// set the object's creator/producer to the string arguement, return nothing
+void Media::setCreator(std::string creator)
+{
     this->creator = creator;
 }
-void Media::setYear(int y){
+
+// save the given integer arguement as the object's year of publish/release as an integer, return nothing
+void Media::setYear(int y)
+{
     year = y;
 }
-void Media::setSize(double s){
+
+// save the ficticious filesize of the object as a double, return nothing
+void Media::setSize(double s)
+{
     num = s;
 }

@@ -1,7 +1,7 @@
 Name, Studio, Year, num,
 The Legend of Zelda: Ocarina of Time,Nintendo,1998,102949,
 SoulCalibur,Bandai Namco,1999,102412,
-Grand Theft Auto IV,Bandai Namco,2008,102040,
+Grand Theft Auto IV,Rockstar,2008,102040,
 Super Mario Galaxy,Nintendo,2007,1029492,
 Super Mario Galaxy 2,2010,1029445,
 The Legend of Zelda: Breath of the Wild,2017,204993,

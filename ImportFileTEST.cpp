@@ -3,9 +3,8 @@
 int main(){
     Shelf movie;
 
-    std::cout << importFile("DATA/movies.txt", "Movies", movie) << "\n\n";
+    std::cout << importFile("DATA/movies.txt", "Movies", movie) << "\n";
     
-    for(int i = 0; i < movie.getSize(); i++){
-        std::cout << movie.getItem(i).getTitle() << ", " << movie.getItem(i).getYear() << ", " <<movie.getItem(i).getSize() << "\n"; 
-    }
+    movie.print();
+    
 }*/

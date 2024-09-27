@@ -68,3 +68,8 @@ void Storage::delShelf(int index){
 Shelf Storage::getShelf(int index){
     return(*stg[index - 1]);
 }
+
+// Function definition for getSize which will return the current size
+int Storage::getSize(){
+    return(size);
+}

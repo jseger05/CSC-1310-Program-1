@@ -22,4 +22,5 @@ class Storage{
     void changeSize(int);
     void delShelf(int);
     Shelf getShelf(int);
+    int getSize();
 };

@@ -34,6 +34,7 @@ struct Shelf{
         Media getItem(int);
         std::string getType();
         int getSize();
+        void print();
 
     
 };

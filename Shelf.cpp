@@ -63,3 +63,10 @@ int Shelf::getSize(){
     size = media.size();
     return(size);
 }
+
+void Shelf::print(){
+    std::cout << "\nShelf of " << type <<":\n";
+    for(int i = 0; i < size; i++){
+        std::cout << "Item " << i + 1 << ": " <<  media.at(i).getTitle() << ", " << media.at(i).getCreator() << ", " << media.at(i).getYear() << ", " << media.at(i).getNum() << '\n';
+    } 
+}

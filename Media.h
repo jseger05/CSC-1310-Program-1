@@ -32,7 +32,7 @@ public:
     void setTitle(std::string);
     void setCreator(std::string);
     void setYear(int);
-    void setSize(double);
+    void setNum(double);
 };
 
 #endif

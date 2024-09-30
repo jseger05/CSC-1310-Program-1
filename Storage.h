@@ -19,6 +19,7 @@ class Storage{
     Storage(int);
     Storage(int, Shelf[]);
     void setMedia(int, Shelf&);
+    void push_back(Shelf&);
     void changeSize(int);
     void delShelf(int);
     Shelf getShelf(int);

@@ -65,7 +65,7 @@ void Media::setYear(int y)
 }
 
 // save the ficticious filesize of the object as a double, return nothing
-void Media::setSize(double s)
+void Media::setNum(double s)
 {
     num = s;
 }

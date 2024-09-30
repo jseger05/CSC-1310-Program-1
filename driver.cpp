@@ -53,16 +53,3 @@ int main(){
     }while(userChoice!=4);
 }
 
-void printMenu(Storage library){
-    std::cout << "\nYour library contains:";
-    //instead of library.getSize()
-    for(int i = 0; i < 2; i++){
-        std::cout << "\n\nShelf " << i+1 << ": " << library.getShelf(i).getSize();
-    }
-    std::cout << "\n\nOptions:";
-    std::cout << "\n1. Edit a shelf";
-    std::cout << "\n2. Import a file";
-    std::cout << "\n3. Export to file (occurs automatically at end of program)";
-    std::cout << "\n4. Exit program";
-}
-

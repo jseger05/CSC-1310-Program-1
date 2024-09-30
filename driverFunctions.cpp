@@ -25,3 +25,16 @@ void inpVer(int& out, int lowerBound, int upperBound, std::string qText, std::st
         }
     }while(!works);
 }
+
+void printMenu(Storage library){
+    std::cout << "\nYour library contains:";
+    //instead of library.getSize()
+    for(int i = 0; i < library.getSize(); i++){
+        std::cout << "\n\nShelf " << i+1 << ": " << library.getShelf(i).getSize();
+    }
+    std::cout << "\n\nOptions:";
+    std::cout << "\n1. Edit a shelf";
+    std::cout << "\n2. Import a file";
+    std::cout << "\n3. Export to file (occurs automatically at end of program)";
+    std::cout << "\n4. Exit program";
+}

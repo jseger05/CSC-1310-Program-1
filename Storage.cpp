@@ -68,3 +68,7 @@ void Storage::delShelf(int index){
 Shelf Storage::getShelf(int index){
     return(*stg[index]);
 }
+
+int Storage::getSize(){
+    return(size);
+}

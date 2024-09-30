@@ -38,3 +38,19 @@ void printMenu(Storage library){
     std::cout << "\n3. Export to file (occurs automatically at end of program)";
     std::cout << "\n4. Exit program";
 }
+
+void editShelf(Shelf&){
+
+}
+
+void createDirectory(Storage){
+
+}
+
+void importMenu(Storage&){
+
+}
+
+void exportAll(Storage){
+    
+}

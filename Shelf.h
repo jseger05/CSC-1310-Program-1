@@ -12,6 +12,7 @@ struct Shelf{
     private:
         std::vector<Media> media;
         std::string type;
+        std::string fileName;
         int size;
     public:
         Shelf(){
@@ -34,7 +35,8 @@ struct Shelf{
         Media getItem(int);
         std::string getType();
         int getSize();
-
+        std::string getFileName();
+        void setFileName(std::string);
     
 };
 

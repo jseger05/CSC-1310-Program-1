@@ -7,6 +7,7 @@
 class Storage{
     private:
         int size;
+        std::string fileName;
         Shelf** stg;
     public:
     Storage(){

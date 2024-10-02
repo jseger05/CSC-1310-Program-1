@@ -1,5 +1,5 @@
 #include "driver.h"
-
+#include <fstream>
 //From hsUtil
 
 /*
@@ -16,7 +16,7 @@ void inpVer(int& out, int lowerBound, int upperBound, std::string qText, std::st
         std::cin >> out;
         if(std::cin.fail()){ 
             std::cin.clear();
-            std::cin.ignore(100000000000000000, '\n'); 
+            std::cin.ignore(INT_MAX, '\n'); 
             std::cout << "\n" << invText;
         }else if(out > upperBound || out < lowerBound){
             std::cout << "\n" << invText;
@@ -157,8 +157,18 @@ void editShelf(Storage& obj, int index){
     }while(choice != 4);
 }
 
-void createDirectory(Storage){
+void createDirectory(Storage obj, std::string directory = "DATA/Directory.txt"){
+    int size = obj.getSize();
+    std::ofstream outFile;
+    outFile.open(directory, std::ios::trunc);
+    if(!outFile.is_open()){
+        return;
+    }
 
+    for(int i = 0; i < size; i++){
+        std::cout << obj.getShelf(i).getFileName() << ",";
+    }
+    outFile.close();
 }
 
 void importMenu(Storage&){

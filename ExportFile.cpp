@@ -35,5 +35,6 @@ bool exportFile(std::string directory, Shelf obj){
         }
     }
     //successful write
+    outFile.close();
     return(true);
 }

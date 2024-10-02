@@ -10,7 +10,7 @@
 bool importFile(std::string fileName, std::string type, Shelf &shelfMedia)
 {
     // using a temp string and media var. to read data
-    std::string input;
+    std::string input, file;
     Media temp;
 
     // defining and trying to open file
@@ -22,6 +22,7 @@ bool importFile(std::string fileName, std::string type, Shelf &shelfMedia)
     {
         return (false);
     }
+
     // discard first line per formatting
     getline(inputFile, input);
     if (input.length() == 0)
@@ -31,6 +32,16 @@ bool importFile(std::string fileName, std::string type, Shelf &shelfMedia)
 
     // sets type of function
     shelfMedia.setType(type);
+
+    //give shelf a filename
+    file = fileName;
+    for(int i = 0; i < file.size() - 1; i++){
+        if(file.at(i) == '/'){
+            file.erase(file.begin(), file.begin() + i);
+        }
+    }
+    shelfMedia.setFileName(file);
+
 
     do
     {
@@ -42,7 +53,7 @@ bool importFile(std::string fileName, std::string type, Shelf &shelfMedia)
         getline(inputFile, input, ','); // reading between the next two delimiters as the year of publishing/release for the media object
         temp.setYear(stoi(input));
         getline(inputFile, input, ','); // reading from the last delimiter to the end of the line as the arbituary file size of the media object
-        temp.setSize(stod(input));
+        temp.setNum(stod(input));
 
         // adding to media
         shelfMedia.addItem(temp);

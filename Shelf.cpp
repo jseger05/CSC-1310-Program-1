@@ -66,3 +66,11 @@ int Shelf::getSize(){
     size = media.size();
     return(size);
 }
+
+std::string Shelf::getFileName(){
+    return(fileName);
+}
+
+void Shelf::setFileName(std::string fileName){
+    this->fileName = fileName;
+}

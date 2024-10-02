@@ -228,10 +228,21 @@ Storage importMenu(){
             break;
         }
     }while(usrIn != 3);
-    
+
     return(tempSt);
 }
 
-void exportAll(Storage){
-
+void exportAll(Storage obj){
+    createDirectory(obj);
+    bool success = true;
+    for(int i = 0; i < obj.getSize(); i++){
+        if(!exportFile(obj.getShelf(i).getFileName(), obj.getShelf(i))){
+            success = false;
+        }
+    }
+    if(success){
+        std::cout << "\nFiles exported successfully\n";
+    }else{
+        std::cout << "\nFile export FAILED\n";
+    }
 }

@@ -166,13 +166,70 @@ void createDirectory(Storage obj, std::string directory = "DATA/Directory.txt"){
     }
 
     for(int i = 0; i < size; i++){
-        std::cout << obj.getShelf(i).getFileName() << ",";
+        std::cout << obj.getShelf(i).getFileName();
+        if(i != size - 1){
+            std::cout << ",";
+        }
     }
     outFile.close();
 }
 
-void importMenu(Storage&){
+Storage readDirectory(std::string directory = "DATA/Directory.txt"){
+    Storage tempst;
+    Shelf tempsh;
+    std::string input, type;
+    std::ifstream inputFile;
+    inputFile.open(directory);
+    if(!inputFile.is_open()){
+        return;
+    }
+    do{
+        getline(inputFile, input, ',');
+        type = input;
+        type.erase(type.end() - 4, type.end());
+        if(importFile(input, type, tempsh)){
+            tempst.push_back(tempsh);
+        }
+    }while(!inputFile.eof());
 
+    return(tempst);
+}
+
+Storage importMenu(){
+    int usrIn;
+    std::string input;
+    Shelf tempSh;
+    Storage tempSt;
+    do{
+        std::cout << "\n\nWhat would you like to do?";
+        std::cout << "\n1). Import a file";
+        std::cout << "\n2). Import a Directory";
+        std::cout << "\n3). Exit";
+
+        inpVer(usrIn, 1, 3);
+
+        switch(usrIn){
+            case(1): 
+                std::cout << "Please enter file name or location:\n";
+                std::cin.ignore(INT_MAX, '\n');
+                getline(std::cin, input);
+                if(importFile(input, "", tempSh)){
+                    std::cout << "What type of media is this?";
+                    getline(std::cin, input);
+                    tempSh.setType(input);
+                    tempSt.push_back(tempSh);
+                }
+            break;
+            case(2):
+                std::cout << "Please enter file name or location:\n";
+                std::cin.ignore(INT_MAX, '\n');
+                getline(std::cin, input);
+                tempSt = readDirectory(input);
+            break;
+        }
+    }while(usrIn != 3);
+    
+    return(tempSt);
 }
 
 void exportAll(Storage){

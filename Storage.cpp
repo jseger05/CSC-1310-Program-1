@@ -38,11 +38,11 @@ void Storage::push_back(Shelf& newShelf){
     changeSize(size + 1);
     //adds shelf obj to end
     setMedia(size, newShelf);
-    //increases shelf size;
+    //increases internal shelf size;
     size++;
 }
 
-// Functio definition for changeSize of the vector.  
+// Function definition for changeSize of the vector.  
 void Storage::changeSize(int newSize){
 
     //defining a temporary array
@@ -76,10 +76,9 @@ void Storage::delShelf(int index){
 
 // Function definition for getShelf which will return the current shelf content
 Shelf Storage::getShelf(int index){
-    return(*stg[index - 1]);
+    return(*stg[index]);
 }
 
-// Function definition for getSize which will return the current size
 int Storage::getSize(){
     return(size);
 }

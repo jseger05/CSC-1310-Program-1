@@ -6,9 +6,12 @@
 #include "Shelf.h"
 Shelf::Shelf(Media arr[]){
     setType("Basic Media");
-    size = sizeof(*arr);
-    media.resize(size);
-    media.assign(arr, arr + size);
+    size = sizeof(*arr)/sizeof(arr[0]);
+    //media.resize(size);
+    /*for(int i = 0; i < size; i++){
+        media.push_back(arr[i]);
+    }*/
+   media.assign(arr, arr + size);
 }
 
 // +++++++++++++++++++++++++++++++
@@ -69,4 +72,12 @@ void Shelf::print(){
     for(int i = 0; i < size; i++){
         std::cout << "Item " << i + 1 << ": " <<  media.at(i).getTitle() << ", " << media.at(i).getCreator() << ", " << media.at(i).getYear() << ", " << media.at(i).getNum() << '\n';
     } 
+}
+
+std::string Shelf::getFileName(){
+    return(fileName);
+}
+
+void Shelf::setFileName(std::string fileName){
+    this->fileName = fileName;
 }

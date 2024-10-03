@@ -19,22 +19,22 @@ int main(){
     std::cout << "\n***Welcome to Media Library!***\n";
 
     //TEMP!!! JUST FOR TESTING
-    Media A("Media A", "J S", 2002, 0);
+    /*Media A("Media A", "J S", 2002, 0);
     Media B("Media B", "J S", 2002, 0);
     Media C("Media C", "J S", 2002, 0);
 
     Media arr1[] = {A, B};
-    Media arr2[] = {C};
+    Media arr2[] = {C};*/
 
     std::cout << "Hello there";
 
-    Shelf SA(arr1);
-    Shelf SB(arr2);
+    /*Shelf SA(arr1);
+    Self SB(arr2);*/
 
-    Storage library(2); 
+    Storage library(0); 
 
-    library.setMedia(0, SA);
-    library.setMedia(1, SB);
+    /*library.setMedia(0, SA);
+    library.setMedia(1, SB);*/
 
     //read test case
 
@@ -44,10 +44,13 @@ int main(){
         printMenu(library);
         inpVer(userChoice, 1, 4);
         switch(userChoice){
-            case 1: editShelf(library, 0); break; //edit shelf -- new menu w options to remove element/s, add element (need dialogue to create new Media),
+            case(1): editShelf(library); break; //edit shelf -- new menu w options to remove element/s, add element (need dialogue to create new Media),
                            //or edit individual element
-            case 2: importMenu(); break; //input file name, call importFile()
-            case 3: exportAll(library); break; //iterate through shelves, input filename/ directory and call export file for each
+            case(2):
+            //I'm tweaking tf out trying to figure out how to allocate memory objects for this, someone review and revise - current iteration fails as no shelf obj exists
+            library.getShelf(library.getSize() - 1) = importMenu(); 
+            break; //input file name, call importFile()
+            case(3): exportAll(library); break; //iterate through shelves, input filename/ directory and call export file for each
             default: break;
         }
     }while(userChoice!=4);

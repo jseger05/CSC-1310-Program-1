@@ -39,12 +39,18 @@ void printMenu(Storage library){
     std::cout << "\n4. Exit program";
 }
 
-void editShelf(Storage& obj, int index){
+void editShelf(Storage& obj){
     //variable declarations
-    int choice, usrIn, item;
+    int choice, usrIn, item, index;
     std::string input;
     Media temp;
-
+    std::cout << "\nWhat Shelf Would you like to modify?\n";
+    for(int i = 0; i < obj.getSize(); i++){
+        std::cout << i + 1 << ").\t" << obj.getShelf(i).getType() << "\n"; 
+    }
+    inpVer(index, 1, obj.getSize() + 1);
+    index--;
+    
     //menu
     do{
         std::cout << 

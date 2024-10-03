@@ -76,7 +76,7 @@ void Storage::delShelf(int index){
 
 // Function definition for getShelf which will return the current shelf content
 Shelf Storage::getShelf(int index){
-    return(*stg[index]);
+    return(*(*(stg + index)));
 }
 
 int Storage::getSize(){

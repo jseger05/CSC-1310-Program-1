@@ -43,6 +43,11 @@ void Shelf::removeItem(int lower, int upper){
     media.erase(media.begin() + lower, media.begin() + upper);
 }
 
+void Shelf::changeSize(int newSize){
+    media.reserve(newSize);
+    size = media.size();
+}
+
 // set the media type of the shelf.  
 void Shelf::setType(std::string type){
     this->type = type;

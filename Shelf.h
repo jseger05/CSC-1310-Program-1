@@ -8,7 +8,7 @@
 #include "Media.h"
 #include <vector>
 
-struct Shelf{
+class Shelf{
     private:
         std::vector<Media> media;
         std::string type;
@@ -30,6 +30,7 @@ struct Shelf{
         void setItem(std::string, std::string, int, double, int);
         void removeItem(int);
         void removeItem(int, int);
+        void changeSize(int);
         void addItem(Media);
         void setType(std::string);
         Media getItem(int);
